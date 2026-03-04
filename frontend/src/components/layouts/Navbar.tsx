@@ -1,4 +1,3 @@
-// src/components/layout/Navbar.tsx
 import { useState } from 'react';
 
 interface NavLinkProps {
@@ -7,8 +6,6 @@ interface NavLinkProps {
   onClick?: () => void;
   className?: string;
 }
-
-import '@fontsource-variable/space-grotesk';
 
 interface NavItem {
   href: string;
@@ -61,14 +58,16 @@ const Navbar = () => {
           {/* Logo with natural left padding from container */}
           <div className="flex-shrink-0">
             <a
-            href="/"
-            className="
-                font-['Space_Grotesk']
-                 tracking-wider
-                text-4xl md:text-3xl font-extrabold text-white
-            "
+              href="/"
+              className="
+                font-['Manrope']
+                tracking-[0.04em]
+                text-3xl md:text-4xl
+                font-extrabold text-white
+                transition-opacity duration-300 hover:opacity-90
+              "
             >
-            Devesh
+              Devesh
             </a>
           </div>
 

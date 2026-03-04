@@ -1,5 +1,4 @@
 // src/components/sections/Hero.tsx
-import React from 'react';
 
 const Hero = () => {
   return (
@@ -25,9 +24,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          1st-year CSE student building real-world MERN apps •
-          <br className="hidden sm:block" />
-          Passionate about clean code, real-time features, and learning SQL next.
+          1st-year Engineering Student • Building with React & TypeScript
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
@@ -69,7 +66,6 @@ const Hero = () => {
           <span className="px-4 py-2 bg-gray-800/80 rounded-full text-sm font-medium text-green-400 border border-green-500/30">
             Tailwind CSS
           </span>
-          {/* Add more as you learn */}
         </div>
       </div>
     </section>

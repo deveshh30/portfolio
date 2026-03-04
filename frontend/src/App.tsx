@@ -10,9 +10,8 @@ function App() {
     <div className={`min-h-screen ${theme === 'dark' ? 'dark' : ''}`}>
       <Navbar />
       <main>
-        <Home/>
+        <Home />
       </main>
-      {/* Footer later */}
     </div>
   )
 }
