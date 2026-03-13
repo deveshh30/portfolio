@@ -5,7 +5,7 @@ const Profile = () => {
     <div className="hidden lg:block absolute right-20 xl:right-32 top-1/2 -translate-y-1/2">
       <div className="relative">
         {/* Outer glow ring */}
-        <div className="absolute -inset-4 bg-gradient-to-br from-blue-500/20 via-purple-500/10 to-cyan-500/20 rounded-full blur-2xl animate-pulse" />
+        <div className="absolute -inset-4 bg-gradient-to-br from-[#004643]/25 via-[#00312f]/15 to-[#00635e]/20 rounded-full blur-2xl animate-pulse" />
         
         {/* Decorative ring */}
         <div className="absolute -inset-2 rounded-full border border-zinc-800/50" />
@@ -14,7 +14,7 @@ const Profile = () => {
         {/* Main photo container - circular */}
         <div className="relative w-[360px] h-[360px] xl:w-[400px] xl:h-[400px] rounded-full overflow-hidden border-2 border-zinc-700/50 shadow-2xl group">
           {/* Inner gradient border effect */}
-          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 z-10 pointer-events-none" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#004643]/15 via-transparent to-[#00635e]/15 z-10 pointer-events-none" />
           
           <img
             src="/profile-photo.jpg"           
@@ -27,8 +27,8 @@ const Profile = () => {
         </div>
 
         {/* Floating accent dots */}
-        <div className="absolute -top-2 -right-2 w-4 h-4 rounded-full bg-blue-500/80 blur-sm" />
-        <div className="absolute -bottom-1 -left-1 w-3 h-3 rounded-full bg-purple-500/60 blur-sm" />
+        <div className="absolute -top-2 -right-2 w-4 h-4 rounded-full bg-[#004643]/80 blur-sm" />
+        <div className="absolute -bottom-1 -left-1 w-3 h-3 rounded-full bg-[#00635e]/65 blur-sm" />
       </div>
       
       {/* Social card centered below profile */}

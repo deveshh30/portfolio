@@ -69,7 +69,7 @@ const Navbar = () => {
             className="text-white font-bold text-xl tracking-tight hover:opacity-80 transition-opacity"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Devesh<span className="text-blue-500">.</span>
+            Devesh<span className="text-[#004643]">.</span>
           </a>
 
           {/* Desktop links */}

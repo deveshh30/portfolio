@@ -5,9 +5,9 @@ const Card = () => {
   return (
     <StyledWrapper>
       <div className="card">
-        <span>Social</span>
+        <span className="text-zinc-100 font-bold">Social</span>
 
-        <a className="social-link" href="https://linkedin.com/in/deveshh30" target="_blank" rel="noopener noreferrer">
+        <a className="social-link" href="https://www.linkedin.com/in/devesh-gupta30/" target="_blank" rel="noopener noreferrer">
           <svg
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@ const Card = () => {
           </svg>
         </a>
 
-        <a className="social-link" href="https://twitter.com/deveshh30" target="_blank" rel="noopener noreferrer">
+        <a className="social-link" href="https://x.com/deveshhh_30" target="_blank" rel="noopener noreferrer">
           <svg
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ const Card = () => {
           </svg>
         </a>
         
-        <a className="social-link" href="https://leetcode.com/deveshh30" target="_blank" rel="noopener noreferrer">
+        <a className="social-link" href="https://leetcode.com/u/DEVESHHH_30/" target="_blank" rel="noopener noreferrer">
           <svg
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -63,13 +63,13 @@ const StyledWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #0d0a08 0%, #1a1310 100%);
+    background: linear-gradient(135deg, #001f1d 0%, #004643 100%);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     overflow: hidden;
     height: 50px;
     width: 240px;
-    border: 1px solid rgba(180, 83, 9, 0.3);
+    border: 1px solid rgba(0, 70, 67, 0.75);
     border-radius: 10px;
   }
 
@@ -88,19 +88,19 @@ const StyledWrapper = styled.div`
     content: "";
     left: 0;
     justify-content: flex-end;
-    background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+    background: linear-gradient(135deg, #001f1d 0%, #004643 100%);
   }
 
   .card::after {
     content: "";
     right: 0;
     justify-content: flex-start;
-    background: linear-gradient(135deg, #92400e 0%, #b45309 100%);
+    background: linear-gradient(130deg, #004643 0%, #002b29 100%);
   }
 
   .card:hover {
-    box-shadow: 0 8px 30px rgba(180, 83, 9, 0.2);
-    border-color: rgba(180, 83, 9, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 70, 67, 0.45), 0 0 20px rgba(0, 70, 67, 0.35);
+    border-color: rgba(0, 99, 94, 0.95);
     transform: translateY(-2px);
   }
 
@@ -126,7 +126,6 @@ const StyledWrapper = styled.div`
     justify-content: center;
     width: 100%;
     height: 100%;
-    color: #a67c52;
     font-family: var(--font-display);
     font-size: 14px;
     font-weight: 500;
@@ -157,7 +156,7 @@ const StyledWrapper = styled.div`
   }
 
   .card .social-link:hover {
-    background: rgba(146, 64, 14, 0.4);
+    background: rgba(0, 70, 67, 0.4);
   }
 
   .card .social-link:hover svg {

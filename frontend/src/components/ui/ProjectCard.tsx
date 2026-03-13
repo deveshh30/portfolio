@@ -9,7 +9,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="
       bg-gray-900/70 border border-gray-800 rounded-xl overflow-hidden
-      hover:border-blue-600/40 transition-all duration-300
+      hover:border-[#004643]/60 transition-all duration-300
       flex flex-col h-full
     ">
       {/* Status badge */}
@@ -40,7 +40,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.tech.map(tech => (
             <span
               key={tech}
-              className="px-3 py-1 text-xs rounded-full bg-gray-800 text-blue-300 border border-blue-500/30"
+              className="px-3 py-1 text-xs rounded-full bg-gray-800 text-[#2ea19b] border border-[#004643]/45"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               {tech}
@@ -51,7 +51,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         {/* Links */}
         <div className="flex gap-6 pt-4">
           {project.liveUrl && (
-            <a href={project.liveUrl} target="_blank" className="text-blue-400 hover:text-blue-300">
+            <a href={project.liveUrl} target="_blank" className="text-[#2ea19b] hover:text-[#59c7c1]">
               Live Demo →
             </a>
           )}

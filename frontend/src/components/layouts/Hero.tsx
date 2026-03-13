@@ -9,17 +9,17 @@ const Hero = () => {
       className="relative min-h-screen flex items-center px-6 md:px-12 lg:px-20 py-20 overflow-hidden bg-[#050508]"
     >
       {/* Main gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 via-[#050508] to-purple-950/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#004643]/30 via-[#050508] to-[#00312f]/20" />
       
       {/* Top spotlight */}
-      <div className="absolute top-0 left-1/4 w-[800px] h-[400px] bg-blue-500/[0.07] rounded-full blur-[120px]" />
+      <div className="absolute top-0 left-1/4 w-[800px] h-[400px] bg-[#004643]/[0.09] rounded-full blur-[120px]" />
       
       {/* Right side glow */}
-      <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-blue-600/[0.06] rounded-full blur-[100px]" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-600/[0.05] rounded-full blur-[80px]" />
+      <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-[#004643]/[0.08] rounded-full blur-[100px]" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#00635e]/[0.06] rounded-full blur-[80px]" />
       
       {/* Bottom accent */}
-      <div className="absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-t from-blue-950/20 via-transparent to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-t from-[#004643]/25 via-transparent to-transparent" />
       
       {/* Grid texture */}
       <div className="absolute inset-0 opacity-[0.03]"
@@ -54,7 +54,7 @@ const Hero = () => {
               style={{ fontFamily: "var(--font-display)" }}
             >
               Devesh
-              <span className="text-blue-500">.</span>
+              <span className="text-[#004643]">.</span>
             </h1>
             <p 
               className="text-xl md:text-2xl text-zinc-400 font-light tracking-wide"

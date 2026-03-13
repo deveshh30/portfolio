@@ -22,7 +22,7 @@ function SkillItem({ skill }: { skill: Skill }) {
 
       <div className="flex-1 space-y-1">
         <h4 
-          className="font-medium text-white group-hover:text-blue-400 transition-colors"
+          className="font-medium text-white group-hover:text-[#004643] transition-colors"
           style={{ fontFamily: "var(--font-display)" }}
         >
           {skill.name}
@@ -37,7 +37,7 @@ function SkillItem({ skill }: { skill: Skill }) {
           <span className={`
             inline-block px-2.5 py-0.5 text-xs font-medium rounded-full
             ${skill.level === 'Strong' ? 'bg-green-900/40 text-green-400 border border-green-500/30' :
-              skill.level === 'Intermediate' ? 'bg-blue-900/40 text-blue-400 border border-blue-500/30' :
+              skill.level === 'Intermediate' ? 'bg-[#002826]/40 text-[#2ea19b] border border-[#004643]/45' :
               'bg-gray-800 text-gray-400 border border-gray-600'}
           `}>
             {skill.level}
@@ -59,7 +59,7 @@ export default function Skills() {
           className="text-4xl md:text-5xl font-bold text-center mb-16"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Technical <span className="text-blue-500">Skills</span>
+          Technical <span className="text-[#004643]">Skills</span>
         </h2>
 
         <div className="space-y-16">

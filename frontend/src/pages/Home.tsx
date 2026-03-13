@@ -2,6 +2,7 @@ import Hero from "../components/layouts/Hero";
 import ProjectCard from "../components/ui/ProjectCard";
 import { projectsData as projects } from '../data/project';
 import Skills from "../components/layouts/Skills";
+import Contact from "../components/layouts/Contact";
 
 const Home = () => {
     return (
@@ -22,7 +23,7 @@ const Home = () => {
                 </p>
 
                 <p className="text-lg text-gray-300 leading-relaxed">
-                    My first major project, <span className="text-blue-400 font-medium">CogniFlow</span>, 
+                    My first major project, <span className="text-[#2ea19b] font-medium">CogniFlow</span>, 
                     taught me how to build real-time collaborative features using Socket.io, 
                     design clean component architecture, and deploy a complete MERN application. 
                     I'm currently deepening my skills in TypeScript and planning to learn SQL and 
@@ -33,15 +34,15 @@ const Home = () => {
                     <h3 className="text-xl font-semibold mb-4">What drives me</h3>
                     <ul className="space-y-3 text-gray-300">
                     <li className="flex items-start gap-3">
-                        <span className="text-blue-500 mt-1">→</span>
+                        <span className="text-[#004643] mt-1">→</span>
                         Writing clean, maintainable code that actually solves problems
                     </li>
                     <li className="flex items-start gap-3">
-                        <span className="text-blue-500 mt-1">→</span>
+                        <span className="text-[#004643] mt-1">→</span>
                         Turning ideas into live, working products (like CogniFlow)
                     </li>
                     <li className="flex items-start gap-3">
-                        <span className="text-blue-500 mt-1">→</span>
+                        <span className="text-[#004643] mt-1">→</span>
                         Learning something new every week and applying it immediately
                     </li>
                     </ul>
@@ -70,7 +71,7 @@ const Home = () => {
             <section id="projects" className="py-20 px-6">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-                    Featured <span className="text-blue-500">Projects</span>
+                    Featured <span className="text-[#004643]">Projects</span>
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -82,6 +83,10 @@ const Home = () => {
             </section>
             <section>
                 <Skills/>
+            </section>
+
+            <section>
+                <Contact/>
             </section>
         </div>
     )

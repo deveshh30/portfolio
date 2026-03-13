@@ -4,7 +4,7 @@ export interface Skill {
   icon?: string;          // optional heroicons name or lucide icon
   evidence: string;       // 1 short sentence – proof you used it
   level?: 'Strong' | 'Intermediate' | 'Beginner'; // optional – be brutally honest
-  color?: string;         // tailwind color accent e.g. 'blue-500'
+  color?: string;         // tailwind color accent e.g. 'teal-500'
 }
 
 export const skillsData: Skill[] = [
@@ -13,7 +13,7 @@ export const skillsData: Skill[] = [
     category: 'Frontend',
     evidence: 'Built modular components, custom hooks, and real-time dashboard in CogniFlow',
     level: 'Intermediate',
-    color: 'blue-500'
+    color: 'teal-500'
   },
   {
     name: 'Tailwind CSS',
