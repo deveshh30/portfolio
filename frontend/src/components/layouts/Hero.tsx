@@ -10,7 +10,7 @@ const Hero = () => {
       {/* Main gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#004643]/30 via-[#050508] to-[#00312f]/20" />
       
-      {/* Top spotlight */}      git push
+      {/* Top spotlight */}
       <div className="absolute top-0 left-1/4 w-[800px] h-[400px] bg-[#004643]/[0.09] rounded-full blur-[120px]" />
       
       {/* Right side glow */}
