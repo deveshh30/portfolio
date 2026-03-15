@@ -35,6 +35,19 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.shortDescription}
         </p>
 
+        <ul className="space-y-2 text-sm text-gray-400">
+          {project.highlights.slice(0, 3).map((highlight) => (
+            <li
+              key={highlight}
+              className="flex items-start gap-2"
+              style={{ fontFamily: "var(--font-body)" }}
+            >
+              <span className="text-[#2ea19b] mt-0.5">•</span>
+              <span>{highlight}</span>
+            </li>
+          ))}
+        </ul>
+
         {/* Tech stack */}
         <div className="flex flex-wrap gap-2">
           {project.tech.map(tech => (
@@ -51,12 +64,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         {/* Links */}
         <div className="flex gap-6 pt-4">
           {project.liveUrl && (
-            <a href={project.liveUrl} target="_blank" className="text-[#2ea19b] hover:text-[#59c7c1]">
+            <a href={project.liveUrl} target="_blank" rel="noreferrer" className="text-[#2ea19b] hover:text-[#59c7c1]">
               Live Demo →
             </a>
           )}
           {project.repoUrl && (
-            <a href={project.repoUrl} target="_blank" className="text-gray-300 hover:text-gray-100">
+            <a href={project.repoUrl} target="_blank" rel="noreferrer" className="text-gray-300 hover:text-gray-100">
               GitHub →
             </a>
           )}
