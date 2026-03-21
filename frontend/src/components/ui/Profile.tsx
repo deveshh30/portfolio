@@ -1,6 +1,9 @@
 import Card from "./Social";
+import avatar from "/blue.png";
 
 const Profile = () => {
+
+
   return (
     <div className="hidden lg:block absolute right-20 xl:right-32 top-1/2 -translate-y-1/2">
       <div className="relative">
@@ -17,7 +20,7 @@ const Profile = () => {
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#004643]/15 via-transparent to-[#00635e]/15 z-10 pointer-events-none" />
           
           <img
-            src="/profile-photo.jpg"           
+            src={avatar}
             alt="Devesh"
             className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
           />

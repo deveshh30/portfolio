@@ -1,91 +1,114 @@
 import { skillsData } from '../../data/skills';
 import type { Skill } from '../../data/skills';
+import {
+  SiGithub,
+  SiHtml5,
+  SiJavascript,
+  SiMongodb,
+  SiNodedotjs,
+  SiReact,
+  SiTailwindcss,
+} from 'react-icons/si';
+import { VscVscode } from 'react-icons/vsc';
+import { motion } from 'framer-motion';
 
-function SkillItem({ skill }: { skill: Skill }) {
+const skillIcons: Record<string, React.ReactNode> = {
+  react: <SiReact className="text-[30px] text-sky-400" aria-hidden="true" />,
+  tailwind: <SiTailwindcss className="text-[30px] text-cyan-400" aria-hidden="true" />,
+  htmlcss: <SiHtml5 className="text-[30px] text-orange-500" aria-hidden="true" />,
+  javascript: <SiJavascript className="text-[30px] text-yellow-400" aria-hidden="true" />,
+  node: <SiNodedotjs className="text-[30px] text-green-500" aria-hidden="true" />,
+  mongodb: <SiMongodb className="text-[30px] text-emerald-500" aria-hidden="true" />,
+  github: <SiGithub className="text-[30px] text-white" aria-hidden="true" />,
+  vscode: <VscVscode className="text-[30px] text-blue-500" aria-hidden="true" />,
+};
+
+const skillTypeLabel: Record<string, string> = {
+  vscode: 'Code Editor',
+  react: 'Framework',
+  tailwind: 'Framework',
+  htmlcss: 'Language',
+  javascript: 'Language',
+  node: 'Javascript Runtime',
+  mongodb: 'Database',
+  github: 'Repository',
+};
+
+const fallbackTypeLabel: Record<Skill['category'], string> = {
+  Frontend: 'Framework',
+  'Backend & Databases': 'Backend',
+  'Tools & Practices': 'Tooling',
+  'Learning Next': 'Learning',
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 26 },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
+const Skills = () => {
   return (
-    <div className="
-      group flex items-start gap-4 p-4 rounded-lg
-      bg-gray-900/40 border border-gray-800
-      hover:border-gray-700 hover:bg-gray-900/60
-      transition-all duration-200
-    ">
-      {/* Optional icon – you can use heroicons or lucide later */}
-      <div className={`w-10 h-10 rounded-md flex items-center justify-center bg-gradient-to-br from-${skill.color}/20 to-transparent`}>
-        {/* Placeholder icon */}
-        <span 
-          className="text-xl font-bold text-gray-400 group-hover:text-white/80 transition-colors"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          {skill.name[0]}
-        </span>
-      </div>
-
-      <div className="flex-1 space-y-1">
-        <h4 
-          className="font-medium text-white group-hover:text-[#004643] transition-colors"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          {skill.name}
-        </h4>
-        <p 
-          className="text-sm text-gray-400"
-          style={{ fontFamily: "var(--font-body)" }}
-        >
-          {skill.evidence}
-        </p>
-        {skill.level && (
-          <span className={`
-            inline-block px-2.5 py-0.5 text-xs font-medium rounded-full
-            ${skill.level === 'Strong' ? 'bg-green-900/40 text-green-400 border border-green-500/30' :
-              skill.level === 'Intermediate' ? 'bg-[#002826]/40 text-[#2ea19b] border border-[#004643]/45' :
-              'bg-gray-800 text-gray-400 border border-gray-600'}
-          `}>
-            {skill.level}
-          </span>
-        )}
-      </div>
-    </div>
-  );
-}
-
-export default function Skills() {
-  // Group skills by category
-  const categories = ['Frontend', 'Backend & Databases', 'Tools & Practices', 'Learning Next'] as const;
-
-  return (
-    <section id="skills" className="py-20 px-6 bg-gray-950/30">
+    <section id="skills" className="py-20 px-6 bg-gray-950">
       <div className="max-w-6xl mx-auto">
-        <h2 
-          className="text-4xl md:text-5xl font-bold text-center mb-16"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          Technical <span className="text-[#004643]">Skills</span>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          Tools & Technologies
         </h2>
+        <p className="text-gray-300 mb-10">My Profesional Skills</p>
 
-        <div className="space-y-16">
-          {categories.map(category => {
-            const categorySkills = skillsData.filter(s => s.category === category);
-
-            if (categorySkills.length === 0) return null;
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-3 gap-4"
+        >
+          {skillsData.map((skill) => {
+            const iconNode = skill.icon ? skillIcons[skill.icon] : undefined;
+            const typeLabel =
+              (skill.icon && skillTypeLabel[skill.icon]) || fallbackTypeLabel[skill.category];
 
             return (
-              <div key={category}>
-                <h3 
-                  className="text-2xl font-semibold mb-6 text-gray-200"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  {category}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {categorySkills.map(skill => (
-                    <SkillItem key={skill.name} skill={skill} />
-                  ))}
+              <motion.div
+                key={skill.name}
+                variants={cardVariants}
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.55 }}
+                className="bg-[#12141f] border border-[#2a2d3b] hover:border-[#3a3f55] rounded-xl px-6 py-5 min-h-[108px] flex items-center gap-4 transition-colors duration-250"
+              >
+                {/* Icon / Logo */}
+                <div className="w-16 h-16 p-3 shrink-0 rounded-md bg-[#1c1f2b] flex items-center justify-center">
+                  {iconNode ? iconNode : (
+                    <span className="text-xl text-gray-300">{skill.name[0]}</span>
+                  )}
                 </div>
-              </div>
+
+                <div className="min-w-0">
+                  <h3 className="font-semibold text-xl leading-tight text-[#d9d9de] truncate">
+                    {skill.name}
+                  </h3>
+                  <p className="text-[19px] text-[#8b90a4] leading-tight mt-1">{typeLabel}</p>
+                </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
-}
+};
+
+export default Skills;
